@@ -4,6 +4,7 @@
 
 // ------ System ------ //
 
+@import "compass"
 @import "grid/csswizardry-grids"
 @import "settings/variables"
 @import "settings/settings"
@@ -19,21 +20,37 @@
 // Global Styles
 ////////////////////////////////
 
+.grid
+	margin-left: -20px
+
 .grid__item
-	margin-left: -4px
+	margin-left: -4px	
 
 .site--title
-	font-size: 7.2em
+	font: 400 3em/2 $font-pacifico
 	text-transform: lowercase
-	color: #555
+	a
+		color: $light-silver
+		text-decoration: none
+		display: block
+		position: relative
+		+transition(all .2s linear)
+		&:hover
+			color: $med-silver
 
-.site--wrap
+.zone--top
+	width: 100%
+	background: #222
+	border-bottom: 2px solid $med-silver
+
+.zone--top-wrap
 	max-width: 1024px
 	margin: 0 auto
 	padding: 0 18px
 
 .nav
 	list-style-type: none
+	text-align: right
 
 .nav--ul
 	margin: 0
@@ -42,3 +59,51 @@
 .nav--li
 	display: inline-block
 	position: relative
+
+.nav--a
+	color: $light-green
+	font: 400 2em/4 $font-patua
+	text-decoration: none
+	display: block
+	position: relative
+	padding: 0 1.4em
+	+transition(all .2s linear)
+	+transform(translate(0, 0))
+	&:hover
+		color: $light-silver
+		text-shadow: 2px 2px 0 $med-grey
+		+transform(translate(-2px, -2px))
+
+////////////////////////////////
+// Zone Hero
+////////////////////////////////
+
+.zone--hero
+	width: 100%
+
+.zone--hero-wrap
+	max-width: 1024px
+	margin: 0 auto
+	padding: 4em 18px
+	text-align: left
+
+.zone--hero-title
+	font: 400 6em/1 $font-patua
+
+.zone--hero-sub-title
+	font: 300 2.6em/2 $font-open-sans
+
+.zone--hero-cta
+	vertical-align: bottom
+	.btn
+		color: $light-silver
+		font: 400 2em/2 $font-patua
+		background: $light-green
+		+border-radius(4px)
+		padding: .5em 1em
+		border: 0
+
+
+////////////////////////////////////////////////
+// End Global SASS
+////////////////////////////////////////////////
