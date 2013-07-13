@@ -1,0 +1,21 @@
+////////////////////////////////////////////////
+// Mixins SASS
+////////////////////////////////////////////////
+
+////////////////////////////////
+// Breakpoints
+////////////////////////////////
+
+@mixin breakpoint($break)
+	@if $break == palm
+		@media all and (max-width: 480px)
+			@content
+	@else if $break == lap
+		@media all and (min-width: 481px) and (max-width: 1023px)
+			@content
+	@else if $break == portable
+		@media all and (max-width: 1023px)
+			@content
+	@else if $break == desk
+		@media all and (min-width: 1024px)
+			@content
