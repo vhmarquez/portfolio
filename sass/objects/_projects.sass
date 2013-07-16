@@ -1,0 +1,33 @@
+////////////////////////////////////////////////
+// Object: Project SASS
+////////////////////////////////////////////////
+
+.project
+	border-bottom: 1px solid $light-silver
+	padding: 1em 5em 3em 0
+	position: relative
+	display: block
+	&:after
+		content: ''
+		font: $font-normal 13em/1 $font-entypo
+		color: $light-silver
+		position: absolute
+		display: block
+		right: 0
+		bottom: 0
+	a
+		p
+			margin: 0
+			color: $font-grey
+	&:hover
+		h1
+			color: $light-blue
+			+transition(all .2s ease-in-out)
+		&:after
+			color: $light-green
+			+transition(all .2s ease-in-out)
+
+.project__header
+	font: $font-bold 2.2em/2 $font-open-sans
+	text-transform: lowercase
+	color: $light-green

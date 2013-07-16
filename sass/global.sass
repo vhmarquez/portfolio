@@ -6,261 +6,87 @@
 
 @import "compass"
 @import "grid/csswizardry-grids"
-@import "settings/variables"
-@import "settings/settings"
-@import "settings/mixins"
+@import "generic/variables"
+@import "generic/mixins"
 
 // ------ Sections ------ //
-@import "sections/header"
-@import "sections/content"
-@import "sections/footer"
 
-// ------ Modules ------ //
+@import "base/layout"
+@import "base/headings"
+@import "base/branding"
+@import "base/nav"
+@import "base/header"
+@import "base/content"
+@import "base/sidebar"
+@import "base/footer"
+
+// ------ Objects ------ //
+
+@import "objects/projects"
 
 ////////////////////////////////
 // Global Styles
 ////////////////////////////////
 
-.grid
-	margin-left: -20px
+*
+	box-sizing: border-box
+	-moz-box-sizing: border-box
 
-.grid__item
-	margin-left: -4px	
+html
+	font-size: 100%
 
-.site__title
-	font: $font-normal 3em/2 $font-patua
-	text-transform: lowercase
-	text-align: left
-	margin: 0
-	a
-		color: $light-green
-		text-decoration: none
-		display: inline-block
-		position: relative
-		+transition(all .2s linear)
-		padding: .2em 0 .4em 0
-		&:hover
-			color: $med-silver
-	+breakpoint(palm)
-		text-align: center
+body
+	font-family: $font-open-sans
+	font-weight: $font-normal
+	color: $font-grey
+	font-size: .625em
+	background: $white
 
-.zone__top
-	width: 100%
-	border-top: 3px solid $light-green
+::selection
+	background: $light-green
 
-.zone__top--wrap
-	max-width: 1024px
-	margin: 0 auto
-	padding: 0 1.8em
+::-moz-selection
+	background: $light-green
 
-// ------ Navigation ------ //
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+	font-family: $font-open-sans
+	font-weight: $font-bolder
+	font-style: normal
+	line-height: 1.2125
+	color: $dark-grey
+	margin-top: .2em
+	margin-bottom: .5em
 
-.nav
-	list-style-type: none
-	text-align: right
-	+breakpoint(palm)
-		text-align: center
+h1
+	font-size: 3.4em
+h2
+	font-size: 2.7em
+h3
+	font-size: 2.2em
+h4
+	font-size: 1.8em
+h5
+	font-size: 1.8em
+h6
+	font-size: 1.6em
 
-.nav__ul
-	margin: 0
-	padding: 0
-	position: relative
-	display: inline-block
+p
+	font-size: 1.4em
+	line-height: 2
+	margin: 1.4em 0
 
-.nav__item
-	display: inline-block
-	position: relative
-
-.nav__link
+a
 	color: $light-green
-	font: $font-normal 5em/1.56 $font-entypo-social
 	text-decoration: none
-	display: block
-	position: relative
-	padding: 0 .4em
-	+transition(all .2s linear)
+	+transition(all .2s ease-in-out)
+	cursor: pointer
 	&:hover
 		color: $light-blue
-		text-shadow: 2px 2px 0 $light-grey
-		+transform(translate(-2px, -2px))
-
-.hero__btn
-	color: $light-green
-	font: $font-normal 2em/2 $font-open-sans
-	text-transform: lowercase
-	background: transparent
-	border: 2px solid $light-green
-	+border-radius(4px)
-	padding: .25em 1em
-	+transition(all .1s linear)
-	position: relative
-	display: inline-block
-	&:active,
-	&:hover
-		color: $white
-		border: 2px solid $white
-
-////////////////////////////////
-// Zone Hero
-////////////////////////////////
-
-.zone__hero
-	width: 100%
-	background: url('../images/layout/noisy-bg.png') repeat
-	border-bottom: 2px solid $med-grey
-	border-top: 2px solid $med-grey
-	+box-shadow(inset 0 3px 3px $black, inset 0 -3px 3px $black)
-
-.zone__hero--wrap
-	max-width: 1024px
-	margin: 0 auto
-	padding: 6em 1.8em
-	text-align: center
-
-.section__hero
-	+text-shadow(2px 2px 3px $black)
-
-.zone__hero--title
-	font: $font-normal 3em/1 $font-patua
-	color: $white
-	+breakpoint(palm)
-		font-size: 2em
-		line-height: 2
-	+breakpoint(lap)
-		font-size: 2em
-		line-height: 2
-
-.zone__hero--sub-title
-	font: $font-normal 2em/2 $font-open-sans
-	color: $light-silver
-	margin-bottom: .7em
-	+breakpoint(palm)
-		font-size: 1.6em
-	+breakpoint(lap)
-		font-size: 1.6em
-
-////////////////////////////////
-// Skills
-////////////////////////////////
-
-.skills__list
-	font: $font-normal 1.4em/2 $font-open-sans
-	color: $light-green
-	list-style-type: none
-	margin: 0
-	+breakpoint(palm)
-		font-size: 1.2em
-	+breakpoint(lap)
-		font-size: 1.2em
-
-.skills__item
-	padding: .5em 1em
-	border: 1px solid $light-green
-	border-radius: 4px
-	display: inline-block
-	position: relative
-	margin: 1em .5em
-
-////////////////////////////////
-// Zone Content
-////////////////////////////////
-
-.zone__content
-	width: 100%
-
-.zone__content--wrap
-	max-width: 1024px
-	margin: 0 auto
-	padding: 2em 1.8em
-
-.section__header
-	font: $font-normal 3em/2 $font-patua
-	text-transform: lowercase
-	color: $light-blue
-
-.project
-	border-bottom: 1px solid $light-silver
-	padding: 1em 5em 3em 0
-	position: relative
-	display: block
-	&:after
-		content: ''
-		font: $font-normal 13em/1 $font-entypo
-		color: $light-silver
-		position: absolute
-		display: block
-		right: 0
-		bottom: 0
-	a
-		p
-			margin: 0
-			color: $font-grey
-	&:hover
-		h1
-			color: $light-blue
-			+transition(all .2s ease-in-out)
-		&:after
-			color: $light-green
-			+transition(all .2s ease-in-out)
-
-.project__header
-	font: $font-bold 2.2em/2 $font-open-sans
-	text-transform: lowercase
-	color: $light-green
-
-////////////////////////////////
-// Sidebar
-////////////////////////////////
-
-.sidebar__header
-	font: $font-normal 3em/2 $font-patua
-	text-transform: lowercase
-	color: $light-blue
-
-.section__about
-	a
-		font-weight: $font-bold
-
-.sidebar__btn--email
-	font: $font-normal 2em/2 $font-patua
-	color: $white
-	text-transform: lowercase
-	text-align: center
-	letter-spacing: .1em
-	border: 0
-	background: $light-green
-	border-radius: 4px
-	position: relative
-	display: block
-	width: 100%
-	+box-shadow(0 3px 0 $dark-green)
-	+transition(none)
-	&:hover,
-	&:focus
-		+transform(translate(0, 3px))
-		+box-shadow(0 0 0)
-		color: $light-silver
-	&:active
-		+box-shadow(inset -3px -3px 3px $dark-green, inset 3px 3px 3px $dark-green)
-
-////////////////////////////////
-// Footer Section
-////////////////////////////////
-
-.zone__footer
-	width: 100%
-	background: url('../images/layout/noisy-bg.png') repeat
-	border-top: 2px solid $med-grey
-	+box-shadow(inset 0 3px 3px $black, inset 0 -3px 3px $black)
-
-.zone__footer--wrap
-	max-width: 1024px
-	margin: 0 auto
-	padding: 1em 1.8em
-	p
-		font: $font-normal 1.4em/2 $font-open-sans
-		color: $white
-
 
 ////////////////////////////////////////////////
 // End Global SASS

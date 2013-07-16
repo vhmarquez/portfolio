@@ -1,0 +1,23 @@
+////////////////////////////////////////////////
+// Branding SASS
+////////////////////////////////////////////////
+
+.zone__top
+	border-top: 3px solid $light-green
+
+.site__title
+	font: $font-normal 3em/2 $font-patua
+	text-transform: lowercase
+	text-align: left
+	margin: 0
+	a
+		color: $light-green
+		text-decoration: none
+		display: inline-block
+		position: relative
+		+transition(all .2s linear)
+		padding: .2em 0 .4em 0
+		&:hover
+			color: $med-silver
+	+breakpoint(palm)
+		text-align: center
