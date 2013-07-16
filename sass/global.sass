@@ -8,6 +8,7 @@
 @import "grid/csswizardry-grids"
 @import "settings/variables"
 @import "settings/settings"
+@import "settings/mixins"
 
 // ------ Sections ------ //
 @import "sections/header"
@@ -27,7 +28,7 @@
 	margin-left: -4px	
 
 .site__title
-	font: 400 3em/2 $font-patua
+	font: $font-normal 3em/2 $font-patua
 	text-transform: lowercase
 	text-align: left
 	margin: 0
@@ -40,25 +41,24 @@
 		padding: .2em 0 .4em 0
 		&:hover
 			color: $med-silver
-	@media (max-width: 480px)
+	+breakpoint(palm)
 		text-align: center
 
 .zone__top
 	width: 100%
-	//+background(linear-gradient($dark-grey, #181818))
 	border-top: 3px solid $light-green
 
 .zone__top--wrap
 	max-width: 1024px
 	margin: 0 auto
-	padding: 0 18px
+	padding: 0 1.8em
 
 // ------ Navigation ------ //
 
 .nav
 	list-style-type: none
 	text-align: right
-	@media (max-width: 480px)
+	+breakpoint(palm)
 		text-align: center
 
 .nav__ul
@@ -73,11 +73,11 @@
 
 .nav__link
 	color: $light-green
-	font: 400 2em/4 $font-open-sans
+	font: $font-normal 5em/1.56 $font-entypo-social
 	text-decoration: none
 	display: block
 	position: relative
-	padding: 0 1.4em
+	padding: 0 .4em
 	+transition(all .2s linear)
 	&:hover
 		color: $light-blue
@@ -114,7 +114,7 @@
 .zone__hero--wrap
 	max-width: 1024px
 	margin: 0 auto
-	padding: 6em 18px
+	padding: 6em 1.8em
 	text-align: center
 
 .section__hero
@@ -123,15 +123,21 @@
 .zone__hero--title
 	font: $font-normal 3em/1 $font-patua
 	color: $white
-	@media (max-width: 480px)
-		font: $font-normal 2em/2 $font-patua
+	+breakpoint(palm)
+		font-size: 2em
+		line-height: 2
+	+breakpoint(lap)
+		font-size: 2em
+		line-height: 2
 
 .zone__hero--sub-title
 	font: $font-normal 2em/2 $font-open-sans
 	color: $light-silver
 	margin-bottom: .7em
-	@media (max-width: 480px)
-		font: $font-normal 1.6em/2 $font-open-sans
+	+breakpoint(palm)
+		font-size: 1.6em
+	+breakpoint(lap)
+		font-size: 1.6em
 
 ////////////////////////////////
 // Skills
@@ -142,6 +148,10 @@
 	color: $light-green
 	list-style-type: none
 	margin: 0
+	+breakpoint(palm)
+		font-size: 1.2em
+	+breakpoint(lap)
+		font-size: 1.2em
 
 .skills__item
 	padding: .5em 1em
@@ -150,6 +160,64 @@
 	display: inline-block
 	position: relative
 	margin: 1em .5em
+
+////////////////////////////////
+// Zone Content
+////////////////////////////////
+
+.zone__content
+	width: 100%
+
+.zone__content--wrap
+	max-width: 1024px
+	margin: 0 auto
+	padding: 2em 1.8em
+
+.section__header
+	font: $font-normal 3em/2 $font-patua
+	text-transform: lowercase
+
+.project
+	border-bottom: 1px solid $light-silver
+	padding: 1em 5em 3em 0
+	position: relative
+	display: block
+	&:after
+		content: ''
+		font: $font-normal 13em/1 $font-entypo
+		color: $light-silver
+		position: absolute
+		display: block
+		right: 0
+		bottom: .1em
+	a
+		p
+			margin: 0
+			color: $font-grey
+	&:hover
+		h1
+			color: $light-blue
+			+transition(all .2s ease-in-out)
+		&:after
+			color: $light-green
+			+transition(all .2s ease-in-out)
+
+.project__header
+	font: $font-bold 2.2em/2 $font-open-sans
+	text-transform: lowercase
+	color: $light-green
+
+////////////////////////////////
+// Sidebar
+////////////////////////////////
+
+.sidebar__header
+	font: $font-normal 3em/2 $font-patua
+	text-transform: lowercase
+
+.section__about
+	a
+		font-weight: $font-bold
 
 
 ////////////////////////////////////////////////

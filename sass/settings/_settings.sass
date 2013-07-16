@@ -7,17 +7,16 @@ html
 
 body
 	font-family: $font-open-sans
-	font-weight: 300
+	font-weight: $font-normal
 	color: $font-grey
 	font-size: .625em
-	background: $light-silver
+	background: $white
 
 ::selection
 	background: $light-green
 
 ::-moz-selection
 	background: $light-green
-
 
 h1,
 h2,
@@ -26,12 +25,12 @@ h4,
 h5,
 h6
 	font-family: $font-open-sans
-	font-weight: 700
+	font-weight: $font-bolder
 	font-style: normal
+	line-height: 1.2125
 	color: $dark-grey
 	margin-top: .2em
 	margin-bottom: .5em
-	line-height: 1.2125
 
 h1
 	font-size: 3.4em
@@ -48,4 +47,13 @@ h6
 
 p
 	font-size: 1.4em
+	line-height: 2
 	margin: 1.4em 0
+
+a
+	color: $light-green
+	text-decoration: none
+	+transition(all .2s ease-in-out)
+	cursor: pointer
+	&:hover
+		color: $light-blue
