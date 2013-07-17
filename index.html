@@ -3,11 +3,18 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0">
-	<title>Victor Marquez - Front-End Developer</title>
+	<meta name="description" content="Front-end developer, OOCSS, BEM, Front-end architechture, Responsive Web Design, SASS, Compass, Git">
+	<!-- DNS Prefetches -->
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//www.google-analytics.com">
+	<!-- CSS -->
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/global.css">
+	<!-- Fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
+	<!-- Site Title -->
+	<title>Victor Marquez - Front-End Developer</title>
 </head>
 <body>
 	<div class="zone zone__top">
@@ -53,7 +60,6 @@
 					<li class="skills__item">Cross-browser debugging</li>
 					<li class="skills__item">PHP</li>
 					<li class="skills__item">Drupal Development</li>
-					<li class="skills__item">Adobe Photoshop</li>
 				</ul>
 			</section>
 		</div>
@@ -63,12 +69,35 @@
 			<!-- Sidebar -->
 			<aside class="section__sidebar grid__item desk--one-third palm--one-whole lap--one-whole push--desk--two-thirds">
 				<!-- About Me -->
-				<section class="section__about">
+				<section class="sidebar__section sidebar__section--about">
 					<header>
 						<h1 class="sidebar__header">.about-me</h1>
 					</header>
-					<p>Hello! My name is Victor Marquez, I am a 23 year old <strong>Front-end Developer</strong> currently working at <a href="http://www.designzillas.com">Designzillas</a>. I have a passion for <strong>CSS Architechture</strong>, <strong>Performance</strong>, and designing <strong>User Interfaces</strong> &#40;<strong>UI</strong>&#41; that enhance <strong>User Experience</strong> &#40;<strong>UX</strong>&#41;.</p>
+					<p>Hello! My name is Victor Marquez, I am a 23 year old <strong>Front-end Developer</strong> who has been building websites  as a hobby since 2004 and as a professional since 2008. I have a passion for <strong>CSS Architechture</strong>, <strong>Performance</strong>, and designing <strong>User Interfaces</strong> &#40;<strong>UI</strong>&#41; that enhance <strong>User Experience</strong> &#40;<strong>UX</strong>&#41;.</p>
 					<a class="sidebar__btn--email" href="mailto:vhmarquez90@gmail.cm">Contact Me</a>
+				</section>
+				<section class="sidebar__section sidebar__section--reading">
+					<header>
+						<h1 class="sidebar__header">.latest-reads</h1>
+					</header>
+					<ul class="reads--latest">
+						<li class="reads__item--latest">
+							<a href="https://smacss.com/" target="_blank">Scalable and Modular Architecture for CSS</a> &#40;<a href="https://smacss.com/" target="_blank">SMACSS</a>&#41;
+						</li>
+					</ul>
+				</section>
+				<section class="sidebar__section sidebar__section--events">
+					<header>
+						<h1 class="sidebar__header">.events-attended</h1>
+					</header>
+					<ul class="events--attended">
+						<li class="events__item--attended">
+							<a href="http://frontenddesignconference.com/" target="_blank">Front-End Design Conference 2013</a>
+						</li>
+						<li class="events__item--attended">
+							<a href="http://summits.phparch.com/summits/devops/" target="_blank">php[architect] DevOps</a>
+						</li>
+					</ul>
 				</section>
 			</aside>
 			<!-- Content Section -->
@@ -83,6 +112,14 @@
 							<h1 class="project__header">Long Island Skydiving</h1>
 						</header>
 						<p>Project lead, Front-End Development, Drupal Development, interior page designs.</p>
+					</a>
+				</article>
+				<article class="project">
+					<a href="http://www.designzillas.com" target="_blank">
+						<header>
+							<h1 class="project__header">Designzillas</h1>
+						</header>
+						<p>Front-End Development, Drupal Development, Responsive Development</p>
 					</a>
 				</article>
 				<article class="project">
@@ -189,5 +226,16 @@
 			<p>&copy; <a href="https://twitter.com/victormarquez" target="_blank">Victor Marquez</a>. Built using <a href="http://csswizardry.com/csswizardry-grids/" target="_blank">CSS Wizardry Grids</a>. The source code of this portfolio is hosted on <a href="https://github.com/vhmarquez/portfolio" target="_blank">GitHub</a></p>
 		</div>
 	</footer>
+	<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-38827244-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>
 </body>
 </html>

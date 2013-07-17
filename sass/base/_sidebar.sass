@@ -2,12 +2,17 @@
 // Sidebar SASS
 ////////////////////////////////////////////////
 
-.section__about
+.sidebar__section
+	margin-bottom: 3em
 	a
 		font-weight: $font-bold
+	li
+		font-size: 1.4em
+		line-height: 2
+		margin: 1em 0
 
 .sidebar__btn--email
-	font: $font-normal 2em/2 $font-patua
+	font: $font-normal 2em/2.6 $font-open-sans
 	color: $white
 	text-transform: lowercase
 	text-align: center
@@ -20,10 +25,8 @@
 	width: 100%
 	+box-shadow(0 3px 0 $dark-green)
 	+transition(none)
-	&:hover,
-	&:focus
-		+transform(translate(0, 3px))
-		+box-shadow(0 0 0)
+	&:hover
 		color: $light-silver
 	&:active
-		+box-shadow(inset -3px -3px 3px $dark-green, inset 3px 3px 3px $dark-green)
+		+transform(translate(0, 3px))
+		+box-shadow(0 0 0)
