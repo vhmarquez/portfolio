@@ -1,10 +1,9 @@
-Professional portfolio of Victor Marquez
-========================================
+Portfolio of Victor Marquez
+=======================================
 
-Personal Portfolio of Front-end Developer Victor Marquez.
-
+Author: Victor Marquez
+Date: 9/6/2014
 Version: 1.1
-
 Updates:
 
 	- Grunt
