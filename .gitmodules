@@ -1,0 +1,3 @@
+[submodule "GRUNT/assets/sass/kraken"]
+	path = GRUNT/assets/sass/kraken
+	url = https://github.com/vhmarquez/kraken.git
